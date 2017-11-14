@@ -171,6 +171,10 @@
 </script>
 
 <style>
+    svg {
+        background-color: white;
+    }
+    
     .map-container {
         border: 1px solid green;
         background-color: lightcyan;
@@ -191,10 +195,6 @@
         stroke-linejoin: round;
         stroke: darkgrey;
         stroke-width: 3px;
-    }
-
-    svg {
-        background-color: white;
     }
 
     .neighborhoods {
