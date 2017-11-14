@@ -1,2 +1,21 @@
-# muni-update
-Showing the update of the muni buses in SF map using d3.js and Vue
+# sf-muni-updates
+
+> Real time positions of SF muni's using d3.js
+
+## Build Setup
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+```
+
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
