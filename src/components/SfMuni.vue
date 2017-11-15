@@ -71,12 +71,8 @@
             renderRoute: function(routeData) {
                 let self = this;
                 let routeLineFunction = d3.line()
-                    .x(function(d) {
-                        return self.projection([d.lon, d.lat])[0]
-                    })
-                    .y(function(d) {
-                        return self.projection([d.lon, d.lat])[1]
-                    })
+                    .x(d => self.projection([d.lon, d.lat])[0])
+                    .y(d => self.projection([d.lon, d.lat])[1])
                     .curve(d3.curveLinear);
                 let tag = routeData.tag;
                 for (let value of routeData.path) {
@@ -150,7 +146,7 @@
             },
             drawBus() {
                 let self = this;
-                const projection = d3.geoMercator().scale(200000).center([-122.45, 37.75])
+                const projection = d3.geoMercator().scale(200000).center([-122.45, 37.75]);
                 self.svg.selectAll('.bus')
                     .data(self.store)
                     .enter()
