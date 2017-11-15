@@ -116,20 +116,20 @@
                 d3.selectAll('.route').style('stroke-opacity', 0.05).attr('stroke-width', 2);
 
                 for (let route of this.selectedRoute) {
-                    const routeTag = '.route[data-tag="' + route + '"]';
+                    const routeTag = `.route[data-tag="${route}"]`;
                     d3.selectAll(routeTag).style('stroke-opacity', 1).attr('stroke-width', 5);
                 }
                 d3.selectAll('.bus').style('fill-opacity', 0.5);
                 for (let selectRoute of this.selectedRoute) {
-                    const buses = '.bus[data-route-tag="' + selectRoute + '"]';
+                    const buses = `.bus[data-route-tag="${selectRoute}"]`;
                     d3.selectAll(buses).style('fill-opacity', 1)
                 }
             },
             editRoute: function(routeTag) {
                 // if the route is not in the model then remove the focus on the route
                 if (this.selectedRoute.indexOf(routeTag) < 0) {
-                    const route = '.route[data-tag="' + routeTag + '"]';
-                    const buses = '.bus[data-route-tag="' + routeTag + '"]';
+                    const route = `.route[data-tag="${routeTag}"]`;
+                    const buses = `.bus[data-route-tag="${routeTag}"]`;
                     if (this.selectedRoute.length === 0) {
                         d3.selectAll('.map').style('stroke-opacity', 0.8);
                         d3.selectAll('.route').style('stroke-opacity', 1).attr('stroke-width', 2);
